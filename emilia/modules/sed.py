@@ -4,7 +4,7 @@ import time
 
 import telegram
 from telegram import Update, Bot
-from telegram.ext import run_async, CallbackContext
+from telegram.ext import run_async
 
 from emilia import dispatcher, LOGGER, spamcheck
 from emilia.modules.disable import DisableAbleRegexHandler
@@ -60,10 +60,8 @@ max_time = 5
 
 @spamcheck
 @run_async
-def sed(bot: Bot, update: Update, context: CallbackContext):
+def sed(bot: Bot, update: Update):
     start = time.time()
-    if update.effective_message.from_user.id != 388576209 or update.effective_message.from_user.id != 686021814:
-        return
     while elapsed_time() < max_time:
         sed_result = separate_sed(update.effective_message.text)
         if sed_result and update.effective_message.reply_to_message:
