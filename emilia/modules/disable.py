@@ -26,7 +26,7 @@ if is_module_loaded(FILENAME):
     DISABLE_OTHER = []
     ADMIN_CMDS = []
 
-    class DisableAbleCommandHandler(CommandHandler):
+    C lass DisableAbleCommandHandler(CommandHandler):
         def __init__(self, command, callback, admin_ok=False, **kwargs):
             super().__init__(command, callback, **kwargs)
             self.admin_ok = admin_ok
@@ -39,6 +39,16 @@ if is_module_loaded(FILENAME):
                 if admin_ok:
                     ADMIN_CMDS.extend(command)
             sql.disableable_cache(command)
+
+    class DisableAbleRegexHandler(RegexHandler):
+        def __init__(self, pattern, callback, friendly="", **kwargs):
+            super().__init__(pattern, callback, **kwargs)
+            DISABLE_OTHER.append(friendly or pattern)
+            self.friendly = friendly or pattern
+
+        def check_update(self, update):
+            chat = update.effective_chat
+            return super().check_update(update) and not sql.is_command_disabled(chat.id, self.friendly)
 
         def check_update(self, update):
             if isinstance(update, Update) and update.effective_message:
