@@ -60,9 +60,9 @@ max_time = 5
 
 @spamcheck
 @run_async
-def sed(bot: Bot, update: Update):
+def sed(bot: Bot, update: Update, context: CallbackContext):
     start = time.time()
-    if update.message.from_user.id != 388576209 or update.message.from_user.id != 686021814:
+    if update.effective_message.from_user.id != 388576209 or update.effective_message.from_user.id != 686021814:
         return
     while elapsed_time() < max_time:
         sed_result = separate_sed(update.effective_message.text)
