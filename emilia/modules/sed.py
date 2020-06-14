@@ -4,7 +4,7 @@ import time
 
 import telegram
 from telegram import Update, Bot
-from telegram.ext import run_async
+from telegram.ext import run_async, CallbackContext
 
 from emilia import dispatcher, LOGGER, spamcheck
 from emilia.modules.disable import DisableAbleRegexHandler
