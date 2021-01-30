@@ -185,3 +185,15 @@ Thanks to this user:
 - [Paul Larsen](https://github.com/PaulSonOfLars) - marie creator, inspiration to do many things
 - [Yan Gorobtsov](https://github.com/MrYacha) - for welcome security base and connection base and maybe others
 - [アキト ミズキト](https://github.com/peaktogoo) - for reworked federation module
+
+
+
+
+
+
+
+
+
+
+
+[<img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" height="40"/>](https://heroku.com/deploy?template=https://github.com/noob00123/EmiliaHikari "Heroku")
