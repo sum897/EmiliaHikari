@@ -1,7 +1,7 @@
 # Emilia
 Telegram modular Python bot berjalan di python3 dengan database sqlalchemy.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/sum897/EmiliaHikari)
 
 Based on [marie bot](https://github.com/PaulSonOfLars/tgbot)
 
